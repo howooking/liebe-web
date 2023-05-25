@@ -1,4 +1,4 @@
-import Slides from '../components/slides';
+// import Slides from '../components/slides';
 
 export default function Carousel() {
   return (
