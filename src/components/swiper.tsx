@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const SLIDES = [0, 1, 2, 3];
 
-export default function Slides() {
+export default function Swiper() {
   return (
     <Carousel
       autoPlay
