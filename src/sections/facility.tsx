@@ -1,6 +1,6 @@
 export default function Facility() {
   return (
-    <section className="h-screen bg-orange-200" id="facility">
+    <section className="h-section bg-orange-200" id="facility">
       Facility
     </section>
   );

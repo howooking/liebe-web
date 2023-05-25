@@ -94,6 +94,10 @@ section {
   scroll-snap-stop: always;
 }
 
+.h-section {
+  height: calc(100vh - 70px);
+}
+
 /* 스크롤바 */
 ::-webkit-scrollbar {
   width: 0.5rem;

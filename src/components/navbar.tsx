@@ -33,7 +33,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setNavbarStyle('#555');
+        setNavbarStyle('#222');
       } else {
         setNavbarStyle('transparent');
       }
