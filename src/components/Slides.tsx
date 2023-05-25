@@ -9,7 +9,6 @@ const SLIDES = [0, 1, 2, 3];
 export default function Slides() {
   return (
     <Carousel
-      // className="hidden"
       autoPlay
       infiniteLoop
       interval={4000}
@@ -19,14 +18,14 @@ export default function Slides() {
       showArrows={false}
       showIndicators
       showStatus={false}
-      // centerMode
-      // centerSlidePercentage={50}
       emulateTouch
       stopOnHover={false}
-      onClickThumb={() => console.log('thumb')}
       swipeScrollTolerance={10}
-      // showThumbs={false}
-      thumbWidth={100}
+      // centerMode
+      // centerSlidePercentage={50}
+
+      showThumbs={false}
+      // thumbWidth={100}
       // renderThumbs={() =>
       //   SLIDES.map((slide) => (
       //     // eslint-disable-next-line @next/next/no-img-element
