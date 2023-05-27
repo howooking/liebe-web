@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react';
 
 const NAV_ITEMS = [
   {
-    label: '인사말',
-    href: '/#salute',
+    label: 'MISSION',
+    href: '/#mission',
   },
   {
     label: '진료과목',
@@ -70,7 +70,7 @@ export default function Navbar() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="hover:font-bold transition duration-200"
+                    className="hover:opacity-30 transition duration-200"
                   >
                     {item.label}
                   </a>

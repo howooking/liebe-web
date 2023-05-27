@@ -1,4 +1,4 @@
-import Salute from '@/sections/salute';
+import Mission from '@/sections/mission';
 import Subjects from '@/sections/subjects';
 import Staff from '@/sections/staff';
 import Facility from '@/sections/facility';
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Salute />
+      <Mission />
       <Subjects />
       <Staff />
       <Facility />
