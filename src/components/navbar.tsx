@@ -29,15 +29,17 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [navbarStyle, setNavbarStyle] = useState('transparent');
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setNavbarStyle('#222');
+        setIsScrolled(true);
       } else {
-        setNavbarStyle('transparent');
+        setIsScrolled(false);
       }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -46,22 +48,17 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed w-full h-[70px] shadow z-50 flex items-center"
-      style={{
-        backgroundColor: navbarStyle,
-        transition: 'background-color 500ms ease',
-      }}
+      className={`fixed w-full h-[70px] select-none shadow z-50 flex items-center hover:bg-accent transition-colors duration-300 ${
+        isScrolled ? 'bg-accent' : 'transparent'
+      }`}
     >
       <Container>
         <div className="flex justify-between items-center">
           {/* 로고 */}
-          <a className="flex items-center gap-2" href="/#carousel">
+          <a className="flex items-center gap-2" href="/#hero">
             <Image src="/logo.png" alt="logo" width={60} height={60} />
-            <div className="flex flex-col text-xl font-bold items-center">
-              <h2 className="text-white tracking-wide">
-                <span className="bg-accent px-1 rounded-sm">24시</span> LIEBE
-                AMC
-              </h2>
+            <div className="flex flex-col font-bold items-center">
+              <h2 className="text-white tracking-wide">24시 LIEBE AMC</h2>
               <h1 className="text-white">리베동물메디컬센터</h1>
             </div>
           </a>
@@ -73,7 +70,7 @@ export default function Navbar() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="hover:text-accent hover:font-bold transition duration-200"
+                    className="hover:font-bold transition duration-200"
                   >
                     {item.label}
                   </a>
@@ -83,10 +80,10 @@ export default function Navbar() {
           </nav>
 
           {/* 시간 & 전화 */}
-          <div className="text-white font-bold flex flex-col items-center bg-red-500 px-1 rounded-sm">
+          {/* <div className="text-white flex flex-col items-center bg-red-500 px-1 rounded-sm">
             <h3>연중무휴 24시 진료</h3>
             <h3>02 6953 7502 </h3>
-          </div>
+          </div> */}
         </div>
       </Container>
     </header>

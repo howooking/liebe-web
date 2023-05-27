@@ -11,7 +11,7 @@ export default function Swiper() {
     <Carousel
       autoPlay
       infiniteLoop
-      interval={4000}
+      interval={7000}
       autoFocus
       useKeyboardArrows
       transitionTime={1000}

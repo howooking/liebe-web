@@ -1,9 +1,15 @@
-// 마지막에 snap으로 인해서 강제로 바로 위 섹션으로 보임
-// 바로 위 섹션하고 합쳐야할듯
+import Image from 'next/image';
+import Container from './container';
+
 export default function Footer() {
   return (
-    <div className="bg-transparent w-full h-[50px] shadow text-center">
-      Footer
+    <div className="bg-slate-800">
+      <Container>
+        <div className="flex items-center gap-2">
+          <Image src="/logo.png" alt="logo" width={60} height={60} />
+          <h2 className="text-white font-bold">리베동물메디컬센터</h2>
+        </div>
+      </Container>
     </div>
   );
 }

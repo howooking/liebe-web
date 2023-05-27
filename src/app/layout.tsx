@@ -23,7 +23,6 @@ export default function RootLayout({
       <body className={notoSansKR.className}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
