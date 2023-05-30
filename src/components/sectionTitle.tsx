@@ -25,7 +25,7 @@ export default function SectionTitle({
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       variants={slideIn}
-      className="space-y-5"
+      className="space-y-2 pb-3"
     >
       <h2 className="text-3xl text-accent font-bold">{title}</h2>
       <h3 className="text-xl text-gray-600">{subTitle}</h3>
