@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function SectionTitle({
   title,
@@ -17,13 +18,18 @@ export default function SectionTitle({
     visible: { opacity: 1, x: 0 },
   };
 
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.25,
+  });
+
   return (
     <motion.div
+      ref={ref}
       transition={{ ease: 'easeOut', duration: 1.5 }}
       initial="hidden"
-      animate="visible"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      animate={inView ? 'visible' : 'hidden'}
+      whileInView="visible"
       variants={slideIn}
       className="space-y-2 pb-3"
     >

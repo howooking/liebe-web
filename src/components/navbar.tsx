@@ -56,7 +56,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* 로고 */}
           <a className="flex items-center gap-2" href="/#hero">
-            <Image src="/logo.png" alt="logo" width={60} height={60} />
+            <Image src="/logo.png" alt="logo" width={60} height={60} priority />
             <div className="flex flex-col font-bold items-center">
               <h2 className="text-white tracking-wide">24시 LIEBE AMC</h2>
               <h1 className="text-white">리베동물메디컬센터</h1>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface MissionCardProps {
   img: string;
@@ -17,12 +18,19 @@ export default function MissionCard({
   subTitle,
   index,
 }: MissionCardProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
   return (
     <motion.div
+      ref={ref}
       className="flex flex-col flex-1"
-      initial={{ opacity: 0, y: '100%' }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.2 * index }}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ ease: 'easeInOut', duration: 1.5, delay: 0.3 * index }}
+      viewport={{ once: false, amount: 0.25 }}
     >
       <Image
         alt={img}
