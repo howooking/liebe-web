@@ -1,4 +1,3 @@
-import { SUBJECTS } from '@/constants/subjects';
 import Image from 'next/image';
 
 interface SubjectPage {

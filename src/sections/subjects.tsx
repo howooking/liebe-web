@@ -1,7 +1,7 @@
 'use client';
 
-import SubjectPage from '@/components/SubjectPage';
 import SubjectNavbar from '@/components/subjectNavbar';
+import SubjectPage from '@/components/subjectPage';
 import { SUBJECTS } from '@/constants/subjects';
 import { useState } from 'react';
 
