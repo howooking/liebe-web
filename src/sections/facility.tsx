@@ -1,5 +1,3 @@
-'use client';
-
 import Container from '@/components/container';
 import FacilitySwiper from '@/components/facilitySwiper';
 import SectionTitle from '@/components/sectionTitle';

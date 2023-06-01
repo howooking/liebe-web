@@ -1,5 +1,3 @@
-'use client';
-
 import Container from '@/components/container';
 import Footer from '@/components/footer';
 import SectionTitle from '@/components/sectionTitle';

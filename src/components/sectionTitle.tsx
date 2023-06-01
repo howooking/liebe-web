@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -31,7 +33,6 @@ export default function SectionTitle({
       animate={inView ? 'visible' : 'hidden'}
       whileInView="visible"
       variants={slideIn}
-      className="space-y-2 pb-3"
     >
       <h2 className="text-3xl text-accent font-bold">{title}</h2>
       <h3 className="text-xl text-gray-600">{subTitle}</h3>

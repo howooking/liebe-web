@@ -90,12 +90,12 @@ export default function FacilitySwiper() {
       transitionTime={1000}
       showArrows
       showIndicators
-      showStatus
+      showStatus={false}
       emulateTouch
       // stopOnHover={false}
       swipeScrollTolerance={10}
       centerMode
-      centerSlidePercentage={80}
+      centerSlidePercentage={90}
       showThumbs
       thumbWidth={100}
       renderThumbs={() =>
@@ -117,6 +117,7 @@ export default function FacilitySwiper() {
             width={3200}
             height={1800}
             className="px-5"
+            priority
           />
           <p className="legend text-red-300">{facility.label}</p>
         </div>
