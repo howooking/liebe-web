@@ -1,7 +1,6 @@
 import Navbar from '@/components/navbar';
 import './globals.css';
 import { Noto_Sans_KR } from 'next/font/google';
-import Footer from '@/components/footer';
 
 const notoSansKR = Noto_Sans_KR({
   weight: ['400', '700', '900'],
@@ -19,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={notoSansKR.className}>
         <Navbar />
         {children}

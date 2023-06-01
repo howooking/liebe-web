@@ -15,7 +15,6 @@ export default function SubjectPage({
   description,
   pageInView,
 }: SubjectPage) {
-  console.log(pageInView);
   return (
     <div
       className={`flex ${id % 2 === 0 ? '' : 'flex-row-reverse'} ${

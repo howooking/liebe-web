@@ -6,21 +6,21 @@ import SectionTitle from '@/components/sectionTitle';
 
 const MISSIONS = [
   {
-    img: 'mission_0',
+    id: 0,
     engTitle: 'Expertise',
     korTitle: '전문적인 기술',
     subTitle:
       '리베는 석박사 출신 등 국내 최고 수준의 전문 의료진이 상주합니다. 또한 대학병원급 장비를 활용하여 정밀하고 정확한 진단을 시행합니다.',
   },
   {
-    img: 'mission_1',
+    id: 1,
     engTitle: 'Standard',
     korTitle: '높은 수준의 기준',
     subTitle:
       '리베 의료진은 반려동물의 완전 치유를 위하여 매우 높은 의료 기준을 적용합니다. 장비와 도구, 각종 약품 등 사소한 것 하나도 타협하지 않겠습니다.',
   },
   {
-    img: 'mission_2',
+    id: 2,
     engTitle: 'Concentration',
     korTitle: '집중, 몰입의 개념',
     subTitle:
@@ -43,7 +43,7 @@ export default function Mission() {
         </div>
         <div className="flex gap-5 w-full pt-10">
           {MISSIONS.map((mission, index) => (
-            <MissionCard key={mission.img} {...mission} index={index} />
+            <MissionCard key={mission.id} {...mission} index={index} />
           ))}
         </div>
       </Container>

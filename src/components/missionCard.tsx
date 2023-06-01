@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 interface MissionCardProps {
-  img: string;
+  id: number;
   engTitle: string;
   korTitle: string;
   subTitle: string;
@@ -12,7 +12,7 @@ interface MissionCardProps {
 }
 
 export default function MissionCard({
-  img,
+  id,
   engTitle,
   korTitle,
   subTitle,
@@ -32,8 +32,8 @@ export default function MissionCard({
       transition={{ ease: 'easeInOut', duration: 1.5, delay: 0.3 * index }}
     >
       <Image
-        alt={img}
-        src={`/${img}.jpg`}
+        alt={`mission_${id}.jpg`}
+        src={`/missions/mission_${id}.jpg`}
         width={463}
         height={375}
         className="pb-8"
