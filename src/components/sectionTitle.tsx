@@ -6,7 +6,7 @@ export default function SectionTitle({
   subTitle,
 }: {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }) {
   // const fadeIn = {
   //   hidden: { opacity: 0 },
@@ -20,13 +20,13 @@ export default function SectionTitle({
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.25,
+    threshold: 0.15,
   });
 
   return (
     <motion.div
       ref={ref}
-      transition={{ ease: 'easeOut', duration: 1.5 }}
+      transition={{ ease: 'easeOut', duration: 1 }}
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       whileInView="visible"

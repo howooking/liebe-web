@@ -30,7 +30,6 @@ export default function MissionCard({
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ ease: 'easeInOut', duration: 1.5, delay: 0.3 * index }}
-      viewport={{ once: false, amount: 0.25 }}
     >
       <Image
         alt={img}

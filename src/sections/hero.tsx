@@ -1,10 +1,10 @@
-import Swiper from '@/components/swiper';
+import HeroSwiper from '@/components/heroSwiper';
 import TimeInfo from '@/components/timeInfo';
 
 export default function Hero() {
   return (
     <section className="h-screen overflow-hidden relative" id="hero">
-      <Swiper />
+      <HeroSwiper />
       <TimeInfo />
     </section>
   );

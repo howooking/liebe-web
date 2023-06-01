@@ -1,12 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
 const SLIDES = [0, 1, 2, 3];
 
-export default function Swiper() {
+export default function HeroSwiper() {
   return (
     <Carousel
       autoPlay
@@ -41,7 +41,7 @@ export default function Swiper() {
         <Image
           key={slide}
           alt={`slide_${slide}`}
-          src={`/photos/slides/slide_${slide}.jpg`}
+          src={`/heroes/hero_${slide}.jpg`}
           width={3200}
           height={1800}
         />
