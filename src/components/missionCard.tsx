@@ -33,7 +33,7 @@ export default function MissionCard({
     >
       <Image
         alt={`mission_${id}.jpg`}
-        src={`/missions/mission_${id}.jpg`}
+        src={`/missions/msn_${id}.jpg`}
         width={463}
         height={375}
         className="pb-8"
