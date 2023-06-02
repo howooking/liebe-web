@@ -10,11 +10,6 @@ export default function SectionTitle({
   title: string;
   subTitle?: string;
 }) {
-  // const fadeIn = {
-  //   hidden: { opacity: 0 },
-  //   visible: { opacity: 1, transition: { duration: 4 } },
-  // };
-
   const slideIn = {
     hidden: { opacity: 0, x: '-100%' },
     visible: { opacity: 1, x: 0 },

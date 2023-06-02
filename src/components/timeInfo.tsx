@@ -24,8 +24,9 @@ export default function TimeInfo() {
           <h4>· 면회시간</h4>
           <p>10:00 ~ 22:00</p>
         </li>
-        <li>
-          <h4 className="font-bold">연중 무휴 24시 진료</h4>
+        <li className="font-bold text-center">
+          <h4>연중 무휴 24시 진료</h4>
+          <h4>02-6953-7502</h4>
         </li>
       </ul>
     </div>

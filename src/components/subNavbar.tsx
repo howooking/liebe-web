@@ -7,7 +7,7 @@ interface SubjectNavbarProps {
   handlePageInView: (subjectId: number) => void;
 }
 
-export default function SubjectNavbar({
+export default function SubNavbar({
   pageInView,
   handlePageInView,
 }: SubjectNavbarProps) {
