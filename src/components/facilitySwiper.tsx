@@ -47,7 +47,7 @@ export default function FacilitySwiper({ images, type }: FacilitySwiperProps) {
             className="px-10"
           />
           <div className="absolute inset-0 flex flex-col justify-end items-center pb-5">
-            <h3 className="bg-accent text-white px-2 rounded-sm">
+            <h3 className="bg-gray-500 text-white px-2 rounded-sm">
               {image.name}
             </h3>
           </div>

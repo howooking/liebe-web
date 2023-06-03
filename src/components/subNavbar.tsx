@@ -31,7 +31,7 @@ export default function SubNavbar({
 }: SubjectNavbarProps) {
   const submenu = submenuType(type);
   return (
-    <nav className="shadow-sm py-5">
+    <nav className="shadow-sm py-3">
       <Container>
         <div className="flex justify-between">
           <SectionTitle title={title} />

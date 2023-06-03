@@ -56,12 +56,6 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-
-          {/* 시간 & 전화 */}
-          {/* <div className="text-white flex flex-col items-center bg-red-500 px-1 rounded-sm">
-            <h3>연중무휴 24시 진료</h3>
-            <h3>02 6953 7502 </h3>
-          </div> */}
         </div>
       </Container>
     </header>

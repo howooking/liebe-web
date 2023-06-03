@@ -3,13 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function SectionTitle({
-  title,
-  subTitle,
-}: {
-  title: string;
-  subTitle?: string;
-}) {
+export default function SectionTitle({ title }: { title: string }) {
   const slideIn = {
     hidden: { opacity: 0, x: '-100%' },
     visible: { opacity: 1, x: 0 },
@@ -30,7 +24,6 @@ export default function SectionTitle({
       variants={slideIn}
     >
       <h2 className="text-3xl text-accent font-bold">{title}</h2>
-      <h3 className="text-xl text-gray-600">{subTitle}</h3>
     </motion.div>
   );
 }

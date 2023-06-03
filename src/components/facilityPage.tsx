@@ -21,7 +21,7 @@ export default function FacilityPage({
   return (
     <div
       className={`${
-        pageInView === id ? 'opacity-100 w-3/4' : 'hidden opacity-0'
+        pageInView === id ? 'opacity-100 w-[70vw]' : 'hidden opacity-0'
       }`}
     >
       <FacilitySwiper images={images} type={engTitle} />
