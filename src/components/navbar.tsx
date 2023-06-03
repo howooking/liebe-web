@@ -3,29 +3,7 @@
 import Image from 'next/image';
 import Container from '@/components/container';
 import { useEffect, useState } from 'react';
-
-const NAV_ITEMS = [
-  {
-    label: 'MISSION',
-    href: '/#mission',
-  },
-  {
-    label: '진료과목',
-    href: '/#subject',
-  },
-  {
-    label: '수의사소개',
-    href: '/#staff',
-  },
-  {
-    label: '시설안내',
-    href: '/#facility',
-  },
-  {
-    label: '오시는길',
-    href: '/#map',
-  },
-];
+import NAV_ITEMS from '@/constants/navbarItem';
 
 export default function Navbar() {
   const [navbarStyle, setNavbarStyle] = useState('transparent');

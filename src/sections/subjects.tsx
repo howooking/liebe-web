@@ -2,7 +2,7 @@
 
 import SubNavbar from '@/components/subNavbar';
 import SubjectPage from '@/components/subjectPage';
-import { SUBJECTS } from '@/constants/subjects';
+import SUBJECTS from '@/constants/subjects';
 import { useState } from 'react';
 
 export default function Subjects() {
@@ -12,7 +12,12 @@ export default function Subjects() {
   };
   return (
     <section className="h-section overflow-hidden" id="subject">
-      <SubNavbar pageInView={pageInView} handlePageInView={handlePageInView} />
+      <SubNavbar
+        pageInView={pageInView}
+        handlePageInView={handlePageInView}
+        type="subject"
+        title="진료과목"
+      />
       {SUBJECTS.map((subject) => (
         <SubjectPage {...subject} key={subject.id} pageInView={pageInView} />
       ))}

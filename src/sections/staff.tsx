@@ -1,19 +1,33 @@
-import Container from '@/components/container';
-import SectionTitle from '@/components/sectionTitle';
-import StaffSwiper from '@/components/staffSwiper';
+'use client';
+
+import StaffPage from '@/components/staffPage';
+import SubNavbar from '@/components/subNavbar';
+import STAFFS from '@/constants/staffs';
+import { useState } from 'react';
 
 export default function Staff() {
+  const [pageInView, setPageInView] = useState(0);
+  const handlePageInView = (subjectId: number) => {
+    setPageInView(subjectId);
+  };
   return (
-    <section className="h-section flex justify-center items-center" id="staff">
-      <Container>
-        <SectionTitle
-          title="수의사소개"
-          subTitle="최고의 의료진들이 함께합니다"
+    <section className="h-section overflow-hidden" id="staff">
+      <SubNavbar
+        pageInView={pageInView}
+        handlePageInView={handlePageInView}
+        type="staff"
+        title="직원소개"
+      />
+      {STAFFS.map((staff) => (
+        <StaffPage
+          key={staff.id}
+          id={staff.id}
+          members={staff.members}
+          pageInView={pageInView}
+          title={staff.title}
+          engTitle={staff.engTitle}
         />
-        <div className="w-full mx-auto">
-          <StaffSwiper />
-        </div>
-      </Container>
+      ))}
     </section>
   );
 }
