@@ -1,125 +1,56 @@
-'use client';
-
 import Image from 'next/image';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-const FACILITIES = [
-  {
-    id: 0,
-    label: '인포',
-  },
-  {
-    id: 1,
-    label: '고양이 친화병원',
-  },
-  {
-    id: 2,
-    label: '약 조제실',
-  },
-  {
-    id: 3,
-    label: '처치실',
-  },
-  {
-    id: 4,
-    label: '처치실',
-  },
-  {
-    id: 5,
-    label: '격리입원실',
-  },
-  {
-    id: 6,
-    label: '2층 인포',
-  },
-  {
-    id: 7,
-    label: '영상 분석실',
-  },
-  {
-    id: 8,
-    label: '탈의실',
-  },
-  {
-    id: 9,
-    label: '워터 트레드밀',
-  },
-  {
-    id: 10,
-    label: 'CT',
-  },
-  {
-    id: 11,
-    label: '수술준비실',
-  },
-  {
-    id: 12,
-    label: '수술실',
-  },
-  {
-    id: 13,
-    label: '수술실',
-  },
-  {
-    id: 14,
-    label: '수술실',
-  },
-  {
-    id: 15,
-    label: '수술실',
-  },
-  {
-    id: 16,
-    label: '마취기',
-  },
-  {
-    id: 17,
-    label: 'C-arm',
-  },
-];
+interface FacilitySwiperProps {
+  images: { name: string; id: number }[];
+  type: string;
+}
 
-export default function FacilitySwiper() {
+export default function FacilitySwiper({ images, type }: FacilitySwiperProps) {
   return (
     <Carousel
-      // autoPlay
+      autoPlay
       infiniteLoop
-      // interval={7000}
+      interval={3000}
       autoFocus
       useKeyboardArrows
       transitionTime={1000}
-      showArrows
-      showIndicators
+      // showArrows
+      showIndicators={false}
       showStatus={false}
       emulateTouch
-      // stopOnHover={false}
       swipeScrollTolerance={10}
       centerMode
-      centerSlidePercentage={90}
+      centerSlidePercentage={75}
       showThumbs
-      thumbWidth={100}
+      thumbWidth={70}
       renderThumbs={() =>
-        FACILITIES.map((facility) => (
+        images.map((image) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={`/facilities/facility_${facility.id}.jpg`}
-            key={facility.id}
-            alt={`facility_${facility.id}`}
+            src={`/facilities/${type}_${image.id}.jpg`}
+            key={image.id}
+            alt={`${type}_${image.id}`}
           />
         ))
       }
     >
-      {FACILITIES.map((facility) => (
-        <div key={facility.id}>
+      {images.map((image) => (
+        <div key={image.id}>
           <Image
-            alt={`facility_${facility.id}`}
-            src={`/facilities/facility_${facility.id}.jpg`}
-            width={3200}
-            height={1800}
-            className="px-5"
+            alt={`${type}_${image.id}`}
+            src={`/facilities/${type}_${image.id}.jpg`}
+            width={613}
+            height={460}
             priority
+            className="px-10"
           />
-          <p className="legend text-red-300">{facility.label}</p>
+          <div className="absolute inset-0 flex flex-col justify-end items-center pb-5">
+            <h3 className="bg-accent text-white px-2 rounded-sm">
+              {image.name}
+            </h3>
+          </div>
         </div>
       ))}
     </Carousel>
