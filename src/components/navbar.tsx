@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Container from '@/components/container';
 import { useEffect, useState } from 'react';
-import NAV_ITEMS from '@/constants/navbarItem';
+import NAV_ITEMS from '@/constants/navbarItems';
 
 export default function Navbar() {
   const [navbarStyle, setNavbarStyle] = useState('transparent');
