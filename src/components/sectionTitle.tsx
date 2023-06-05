@@ -11,7 +11,7 @@ export default function SectionTitle({ title }: { title: string }) {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.15,
+    threshold: 0.25,
   });
 
   return (
@@ -23,7 +23,7 @@ export default function SectionTitle({ title }: { title: string }) {
       whileInView="visible"
       variants={slideIn}
     >
-      <h2 className="text-3xl text-accent font-bold">{title}</h2>
+      <h2 className="text-3xl text-accent font-bold inline-block">{title}</h2>
     </motion.div>
   );
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { Separator } from '@/components/ui/separator';
 import { motion } from 'framer-motion';
@@ -36,12 +38,14 @@ export default function MissionCard({
         src={`/missions/msn_${id}.jpg`}
         width={463}
         height={375}
-        className="pb-8"
+        className="py-8 w-full"
       />
-      <h3 className="text-lg text-gray-500">{engTitle}</h3>
-      <h3 className="text-3xl font-bold">{korTitle}</h3>
-      <Separator className="my-3" />
-      <p className="text-sm break-keep">{subTitle}</p>
+      <div className="p-3">
+        <h3 className="text-lg text-gray-500">{engTitle}</h3>
+        <h3 className="text-3xl font-bold py-2">{korTitle}</h3>
+        <Separator className="my-3" />
+        <p className="break-keep">{subTitle}</p>
+      </div>
     </motion.div>
   );
 }

@@ -5,13 +5,16 @@ import STAFFS from '@/constants/staffs';
 import FACILITY from '@/constants/facility';
 
 interface SubjectNavbarProps {
-  pageInView: number;
+  pageInView?: number;
   handlePageInView: (subjectId: number) => void;
-  type: 'subject' | 'staff' | 'facility';
+  type?: 'subject' | 'staff' | 'facility';
   title: string;
 }
 
-const submenuType = (type: 'subject' | 'staff' | 'facility') => {
+const submenuType = (type?: 'subject' | 'staff' | 'facility') => {
+  if (!type) {
+    return [];
+  }
   if (type === 'subject') {
     return SUBJECTS;
   }
@@ -35,19 +38,23 @@ export default function SubNavbar({
       <Container>
         <div className="flex justify-between">
           <SectionTitle title={title} />
-          <ul className="flex gap-9 items-center">
-            {submenu?.map((el) => (
-              <li
-                key={el.title}
-                onClick={() => handlePageInView(el.id)}
-                className={`p-2 cursor-pointer transition font-bold duration-500 ${
-                  pageInView === el.id ? 'opacity-100' : 'opacity-40'
-                }`}
-              >
-                {el.title}
-              </li>
-            ))}
-          </ul>
+          {type ? (
+            <ul className="flex gap-9 items-center">
+              {submenu?.map((el) => (
+                <li
+                  key={el.title}
+                  onClick={() => handlePageInView(el.id)}
+                  className={`p-2 cursor-pointer transition font-bold duration-500 ${
+                    pageInView === el.id ? 'opacity-100' : 'opacity-40'
+                  }`}
+                >
+                  {el.title}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <></>
+          )}
         </div>
       </Container>
     </nav>

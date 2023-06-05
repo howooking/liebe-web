@@ -14,7 +14,7 @@ export default function Facility() {
     setPageInView(subjectId);
   };
   return (
-    <section className="h-section overflow-hidden" id="staff">
+    <section className="h-section overflow-hidden" id="facility">
       <SubNavbar
         pageInView={pageInView}
         handlePageInView={handlePageInView}

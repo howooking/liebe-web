@@ -1,26 +1,16 @@
-'use client';
-
-import Container from '@/components/container';
 import MissionCard from '@/components/missionCard';
-import SectionTitle from '@/components/sectionTitle';
+import SubNavbar from '@/components/subNavbar';
 import MISSIONS from '@/constants/missions';
 
 export default function Mission() {
   return (
-    <section
-      className="h-section flex justify-center items-center"
-      id="mission"
-    >
-      <Container>
-        <div>
-          <SectionTitle title="LIEBE MISSION" />
-        </div>
-        <div className="flex gap-5 w-full pt-10">
-          {MISSIONS.map((mission, index) => (
-            <MissionCard key={mission.id} {...mission} index={index} />
-          ))}
-        </div>
-      </Container>
+    <section className="h-section overflow-hidden" id="mission">
+      <SubNavbar title="LIEBE MISSION" handlePageInView={() => {}} />
+      <div className="flex gap-5 w-full h-full">
+        {MISSIONS.map((mission, index) => (
+          <MissionCard key={mission.id} {...mission} index={index} />
+        ))}
+      </div>
     </section>
   );
 }
