@@ -98,6 +98,20 @@ section {
   height: calc(100vh - 70px);
 }
 
+.image {
+  height: calc(100vh - 150px);
+  width: calc((100vh- 150px) * 3 / 4);
+}
+.h-page {
+  height: calc(100vh - 150px);
+}
+.staff-ratio {
+  aspect-ratio: 3 /4;
+}
+.w-caro {
+  width: calc((100vh- 150px) * 3 / 4);
+}
+
 /* 스크롤바 */
 ::-webkit-scrollbar {
   width: 0.5rem;
@@ -110,4 +124,44 @@ section {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #0054a7;
+}
+
+/* floating button background */
+.kakao:hover {
+  background-color: #ffe812;
+}
+
+.naver:hover {
+  background-color: #03c75a;
+  color: #ffffff;
+}
+
+.instagram:hover {
+  color: #ffffff;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }

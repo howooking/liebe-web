@@ -26,7 +26,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full h-[70px] select-none shadow z-50 flex items-center hover:bg-accent transition-colors duration-300 ${
+      className={`fixed w-full h-[70px] select-none shadow z-40 flex items-center hover:bg-accent transition-colors duration-300 ${
         isScrolled ? 'bg-accent' : 'transparent'
       }`}
     >

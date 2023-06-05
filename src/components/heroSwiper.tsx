@@ -11,7 +11,7 @@ export default function HeroSwiper() {
     <Carousel
       autoPlay
       infiniteLoop
-      interval={7000}
+      interval={4000}
       autoFocus
       useKeyboardArrows
       transitionTime={1000}
