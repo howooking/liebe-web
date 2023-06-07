@@ -28,7 +28,7 @@ export default function StaffPage({
     <div
       className={`${
         pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
-      } transition-all duration-500`}
+      } transition-all duration-1000`}
     >
       <StaffSwiper members={members} type={engTitle} infinite={infinite} />
     </div>

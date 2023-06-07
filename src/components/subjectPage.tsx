@@ -19,7 +19,7 @@ export default function SubjectPage({
     <div
       className={`flex ${id % 2 === 0 ? '' : 'flex-row-reverse'} ${
         pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
-      } transition-all duration-500`}
+      } transition-all duration-1000`}
     >
       <div className="w-2/3">
         <Image
