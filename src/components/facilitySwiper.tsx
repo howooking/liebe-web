@@ -22,7 +22,7 @@ export default function FacilitySwiper({ images, type }: FacilitySwiperProps) {
       emulateTouch
       swipeScrollTolerance={10}
       centerMode
-      centerSlidePercentage={75}
+      centerSlidePercentage={55}
       showThumbs
       thumbWidth={70}
       renderThumbs={() =>

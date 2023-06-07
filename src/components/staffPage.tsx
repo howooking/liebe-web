@@ -19,7 +19,6 @@ interface SubjectPage {
 
 export default function StaffPage({
   id,
-  title,
   members,
   pageInView,
   engTitle,
@@ -27,7 +26,9 @@ export default function StaffPage({
   const infinite = engTitle === 'vet' || engTitle === 'nurse' ? true : false;
   return (
     <div
-      className={`${pageInView === id ? 'opacity-100' : 'hidden opacity-0'}`}
+      className={`${
+        pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
+      } transition-all duration-500`}
     >
       <StaffSwiper members={members} type={engTitle} infinite={infinite} />
     </div>

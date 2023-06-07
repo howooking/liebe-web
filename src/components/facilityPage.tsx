@@ -16,13 +16,12 @@ export default function FacilityPage({
   id,
   images,
   pageInView,
-  title,
 }: SubjectPage) {
   return (
     <div
       className={`${
-        pageInView === id ? 'opacity-100 w-[70vw]' : 'hidden opacity-0'
-      }`}
+        pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
+      } transition-all duration-500`}
     >
       <FacilitySwiper images={images} type={engTitle} />
     </div>

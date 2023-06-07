@@ -21,7 +21,7 @@ export default function Facility() {
         type="facility"
         title="시설안내"
       />
-      <div className="flex justify-center items-center p-5">
+      <div>
         {FACILITY.map((facility) => (
           <FacilityPage
             key={facility.id}
