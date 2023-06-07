@@ -18,11 +18,7 @@ export default function FacilityPage({
   pageInView,
 }: SubjectPage) {
   return (
-    <div
-      className={`${
-        pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
-      } transition-all duration-1000`}
-    >
+    <div className={`${pageInView === id ? '' : 'hidden'} `}>
       <FacilitySwiper images={images} type={engTitle} />
     </div>
   );

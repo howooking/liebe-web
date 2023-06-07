@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import StaffSwiper from './staffSwiper';
 
 export interface Member {
@@ -25,11 +24,7 @@ export default function StaffPage({
 }: SubjectPage) {
   const infinite = engTitle === 'vet' || engTitle === 'nurse' ? true : false;
   return (
-    <div
-      className={`${
-        pageInView === id ? 'opacity-100' : 'opacity-0 h-0'
-      } transition-all duration-1000`}
-    >
+    <div className={`${pageInView === id ? '' : 'hidden'} `}>
       <StaffSwiper members={members} type={engTitle} infinite={infinite} />
     </div>
   );
