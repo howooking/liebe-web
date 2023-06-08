@@ -5,10 +5,10 @@ import MISSIONS from '@/constants/missions';
 export default function Mission() {
   return (
     <section className="h-section overflow-hidden" id="mission">
-      <SubNavbar title="LIEBE MISSION" handlePageInView={() => {}} />
+      <SubNavbar title="LIEBE MISSION" />
       <div className="flex gap-5 w-full h-full">
-        {MISSIONS.map((mission, index) => (
-          <MissionCard key={mission.id} {...mission} index={index} />
+        {MISSIONS.map((mission) => (
+          <MissionCard key={mission.id} {...mission} />
         ))}
       </div>
     </section>

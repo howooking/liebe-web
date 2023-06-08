@@ -44,7 +44,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={notoSansKR.className}>
+      <body className={`${notoSansKR.className} select-none`}>
         <Navbar />
         {children}
         <Floatings />

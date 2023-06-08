@@ -24,7 +24,7 @@ export default function StaffPage({
 }: SubjectPage) {
   const infinite = engTitle === 'vet' || engTitle === 'nurse' ? true : false;
   return (
-    <div className={`${pageInView === id ? '' : 'hidden'} `}>
+    <div className={`${pageInView === id ? '' : 'hidden'} pt-5`}>
       <StaffSwiper members={members} type={engTitle} infinite={infinite} />
     </div>
   );

@@ -18,7 +18,7 @@ export default function FacilityPage({
   pageInView,
 }: SubjectPage) {
   return (
-    <div className={`${pageInView === id ? '' : 'hidden'} `}>
+    <div className={`${pageInView === id ? '' : 'hidden'} pt-5`}>
       <FacilitySwiper images={images} type={engTitle} />
     </div>
   );

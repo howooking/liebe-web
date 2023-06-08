@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-interface SubjectPage {
+interface SubjectPageProps {
   id: number;
   title: string;
   subtitle: string;
@@ -14,7 +14,7 @@ export default function SubjectPage({
   subtitle,
   description,
   pageInView,
-}: SubjectPage) {
+}: SubjectPageProps) {
   return (
     <div
       className={`flex ${id % 2 === 0 ? '' : 'flex-row-reverse'} ${
@@ -33,7 +33,7 @@ export default function SubjectPage({
       <div className="w-1/3 p-10 space-y-3">
         <h2 className="text-3xl font-bold">{title}</h2>
         <h2 className="text-xl text-gray-400">{subtitle}</h2>
-        <p>{description}</p>
+        <p className="break-all">{description}</p>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function StaffSwiper({
   return (
     <Carousel
       autoPlay
-      interval={5000}
+      interval={4000}
       infiniteLoop={infinite}
       autoFocus
       useKeyboardArrows
@@ -30,10 +30,8 @@ export default function StaffSwiper({
       transitionTime={500}
       emulateTouch
       swipeScrollTolerance={100}
-      showThumbs={false}
-      // swipeable={false}
       centerMode
-      centerSlidePercentage={40}
+      centerSlidePercentage={35}
     >
       {members.map((member) => (
         <div key={member.id}>

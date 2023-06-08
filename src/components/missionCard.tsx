@@ -10,7 +10,6 @@ interface MissionCardProps {
   engTitle: string;
   korTitle: string;
   subTitle: string;
-  index: number;
 }
 
 export default function MissionCard({
@@ -18,11 +17,10 @@ export default function MissionCard({
   engTitle,
   korTitle,
   subTitle,
-  index,
 }: MissionCardProps) {
   const [ref, inView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   return (
@@ -31,7 +29,7 @@ export default function MissionCard({
       className="flex flex-col flex-1"
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ ease: 'easeInOut', duration: 1.5, delay: 0.3 * index }}
+      transition={{ ease: 'easeInOut', duration: 1.5, delay: 0.3 * id }}
     >
       <Image
         alt={`mission_${id}.jpg`}

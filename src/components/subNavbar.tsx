@@ -6,7 +6,7 @@ import FACILITY from '@/constants/facility';
 
 interface SubjectNavbarProps {
   pageInView?: number;
-  handlePageInView: (subjectId: number) => void;
+  handlePageInView?: (subjectId: number) => void;
   type?: 'subject' | 'staff' | 'facility';
   title: string;
 }
@@ -43,9 +43,9 @@ export default function SubNavbar({
               {submenu?.map((el) => (
                 <li
                   key={el.title}
-                  onClick={() => handlePageInView(el.id)}
+                  onClick={() => handlePageInView!(el.id)}
                   className={`p-2 cursor-pointer transition font-bold duration-500 ${
-                    pageInView === el.id ? 'opacity-100' : 'opacity-40'
+                    pageInView === el.id ? '' : 'opacity-40'
                   }`}
                 >
                   {el.title}
