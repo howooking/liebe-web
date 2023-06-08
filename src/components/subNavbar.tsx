@@ -44,7 +44,7 @@ export default function SubNavbar({
                 <li
                   key={el.title}
                   onClick={() => handlePageInView!(el.id)}
-                  className={`p-2 cursor-pointer transition font-bold duration-500 ${
+                  className={`cursor-pointer transition font-bold duration-500 ${
                     pageInView === el.id ? '' : 'opacity-40'
                   }`}
                 >

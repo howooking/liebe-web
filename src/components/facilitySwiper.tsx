@@ -16,7 +16,6 @@ export default function FacilitySwiper({ images, type }: FacilitySwiperProps) {
       autoFocus
       useKeyboardArrows
       transitionTime={1000}
-      // showArrows
       showIndicators={false}
       showStatus={false}
       emulateTouch

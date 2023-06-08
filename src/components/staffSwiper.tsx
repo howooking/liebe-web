@@ -19,8 +19,6 @@ export default function StaffSwiper({
 }: StaffSwiperProps) {
   return (
     <Carousel
-      autoPlay
-      interval={4000}
       infiniteLoop={infinite}
       autoFocus
       useKeyboardArrows
@@ -31,7 +29,7 @@ export default function StaffSwiper({
       emulateTouch
       swipeScrollTolerance={100}
       centerMode
-      centerSlidePercentage={35}
+      centerSlidePercentage={40}
     >
       {members.map((member) => (
         <div key={member.id}>
@@ -41,9 +39,9 @@ export default function StaffSwiper({
             width={460}
             height={613}
             priority
-            className="px-14"
+            className="px-20"
           />
-          <div className="absolute inset-0 group hover:bg-black/60 mx-14 transition duration-300 text-white flex flex-col justify-end items-center pb-8">
+          <div className="absolute inset-0 group hover:bg-black/60 mx-20 transition duration-300 text-white flex flex-col justify-end items-center pb-8">
             <div className="group-hover:opacity-100 transition duration-300 p-3 space-y-2 opacity-0">
               <h3 className="font-bold text-lg">
                 {member.title} {member.name}

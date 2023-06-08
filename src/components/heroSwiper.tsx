@@ -26,8 +26,8 @@ export default function HeroSwiper() {
           key={slide}
           alt={`slide_${slide}`}
           src={`/heroes/hero_${slide}.jpg`}
-          width={3200}
-          height={1800}
+          width={1400}
+          height={787}
           priority
         />
       ))}
