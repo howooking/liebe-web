@@ -5,7 +5,7 @@ import { BsInstagram } from 'react-icons/bs';
 const SOCIALS = [
   {
     label: 'kakao',
-    href: 'https://www.kakaocorp.com/page/',
+    href: 'https://pf.kakao.com/_uwdNT',
     icon: RiKakaoTalkFill,
     size: 20,
   },
@@ -17,7 +17,7 @@ const SOCIALS = [
   },
   {
     label: 'instagram',
-    href: 'https://www.instagram.com/',
+    href: 'https://www.instagram.com/liebeamc/',
     icon: BsInstagram,
     size: 20,
   },
